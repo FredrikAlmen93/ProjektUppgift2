@@ -10,4 +10,8 @@ public class Electronic extends Product {
     public String category() {
         return "Electronic";
     }
+
+    public String getModel() {
+        return model;
+    }
 }

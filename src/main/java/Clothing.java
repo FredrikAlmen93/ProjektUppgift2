@@ -10,4 +10,8 @@ public class Clothing extends Product {
     public String category() {
         return "Clothing";
     }
+
+    public String getSize() {
+        return size;
+    }
 }
