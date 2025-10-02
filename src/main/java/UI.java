@@ -1,7 +1,7 @@
 public interface UI {
-    String menu();
+    public String menu();
 
-    void info();
+    public void info(String message);
 
-    String prompt();
+    public String prompt(String message);
 }
