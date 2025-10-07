@@ -14,4 +14,14 @@ public class Electronic extends Product {
     public String getModel() {
         return model;
     }
+
+    @Override
+    public String toString() {
+        return "Category: " + category() +
+                "\nArticle number: " + getArticleNumber() +
+                "\nModel: " + model +
+                "\nTitle: " + getTitle() +
+                "\nPrice: " + getPrice() +
+                "\nDescription: " + getDescription();
+    }
 }

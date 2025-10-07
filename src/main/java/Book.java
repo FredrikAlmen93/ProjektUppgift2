@@ -14,4 +14,14 @@ public class Book extends Product {
     public String getAuthor() {
         return author;
     }
+
+    @Override
+    public String toString() {
+        return "Category: " + category() +
+                "\nArticle number: " + getArticleNumber() +
+                "\nAuthor: " + author +
+                "\nTitle: " + getTitle() +
+                "\nPrice: " + getPrice() +
+                "\nDescription: " + getDescription();
+    }
 }

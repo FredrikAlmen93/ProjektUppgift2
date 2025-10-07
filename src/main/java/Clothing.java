@@ -14,4 +14,14 @@ public class Clothing extends Product {
     public String getSize() {
         return size;
     }
+
+    @Override
+    public String toString() {
+        return "Category: " + category() +
+                "\nArticle number: " + getArticleNumber() +
+                "\nSize: " + size +
+                "\nTitle: " + getTitle() +
+                "\nPrice: " + getPrice() +
+                "\nDescription: " + getDescription();
+    }
 }
