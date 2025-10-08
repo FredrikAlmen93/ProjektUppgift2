@@ -1,25 +1,27 @@
-public class Book extends Product {
-    private String author;
+package se.iths.fredrik.projekt2;
 
-    public Book(String articleNumber, String title, double price, String description, String author) {
+public class Clothing extends Product {
+    private String size;
+
+    public Clothing(String articleNumber, String title, double price, String description, String size) {
         super(articleNumber, title, price, description);
-        this.author = author;
+        this.size = size;
     }
 
     @Override
     public String category() {
-        return "Book";
+        return "Clothing";
     }
 
-    public String getAuthor() {
-        return author;
+    public String getSize() {
+        return size;
     }
 
     @Override
     public String toString() {
         return "Category: " + category() +
                 "\nArticle number: " + getArticleNumber() +
-                "\nAuthor: " + author +
+                "\nSize: " + size +
                 "\nTitle: " + getTitle() +
                 "\nPrice: " + getPrice() +
                 "\nDescription: " + getDescription();

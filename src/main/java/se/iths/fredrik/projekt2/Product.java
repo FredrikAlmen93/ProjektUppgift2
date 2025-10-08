@@ -1,3 +1,5 @@
+package se.iths.fredrik.projekt2;
+
 public abstract class Product {
     private String articleNumber;
     private String title;

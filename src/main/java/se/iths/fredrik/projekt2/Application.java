@@ -1,8 +1,10 @@
-import java.util.ArrayList;
+package se.iths.fredrik.projekt2;
+
 import java.util.List;
 
 public class Application {
-    private List<Product> productList = new ArrayList<>();
+    private final ProductInventory inventory = new ProductInventory();
+    private List<Product> productList = inventory.load();
     private UI ui;
 
     public Application(UI ui) {
@@ -56,14 +58,17 @@ public class Application {
                 case "book":
                     String author = ui.prompt("Enter name of author");
                     productList.add(new Book(articleNumber, title, price, description, author));
+                    inventory.save(productList, "products.txt");
                     break;
                 case "electronic":
                     String model = ui.prompt("Enter product model");
                     productList.add(new Electronic(articleNumber, title, price, description, model));
+                    inventory.save(productList, "products.txt");
                     break;
                 case "clothing":
                     String size = ui.prompt("Enter clothing size");
                     productList.add(new Clothing(articleNumber, title, price, description, size));
+                    inventory.save(productList, "products.txt");
                     break;
                 default:
                     ui.info("Incorrect input.");

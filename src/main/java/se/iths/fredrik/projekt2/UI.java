@@ -1,3 +1,5 @@
+package se.iths.fredrik.projekt2;
+
 public interface UI {
     public String menu();
 

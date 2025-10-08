@@ -1,25 +1,27 @@
-public class Electronic extends Product {
-    private String model;
+package se.iths.fredrik.projekt2;
 
-    public Electronic(String articleNumber, String title, double price, String description, String model) {
+public class Book extends Product {
+    private String author;
+
+    public Book(String articleNumber, String title, double price, String description, String author) {
         super(articleNumber, title, price, description);
-        this.model = model;
+        this.author = author;
     }
 
     @Override
     public String category() {
-        return "Electronic";
+        return "Book";
     }
 
-    public String getModel() {
-        return model;
+    public String getAuthor() {
+        return author;
     }
 
     @Override
     public String toString() {
         return "Category: " + category() +
                 "\nArticle number: " + getArticleNumber() +
-                "\nModel: " + model +
+                "\nAuthor: " + author +
                 "\nTitle: " + getTitle() +
                 "\nPrice: " + getPrice() +
                 "\nDescription: " + getDescription();

@@ -1,3 +1,5 @@
+package se.iths.fredrik.projekt2;
+
 import java.util.Scanner;
 
 public class scannerUI implements UI {
