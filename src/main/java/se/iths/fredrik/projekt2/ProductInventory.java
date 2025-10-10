@@ -51,7 +51,7 @@ public class ProductInventory {
     public List<Product> load() {
         List<Product> productList = new ArrayList<>();
         if (!Files.exists(FILE_PATH)) {
-            System.out.println("No product list found. Creating new product list.");
+            System.out.println("No product list found. List will be created when first product is saved.");
             return productList;
         }
         try {
